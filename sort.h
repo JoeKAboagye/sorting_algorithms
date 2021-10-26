@@ -37,6 +37,9 @@ void counting_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void merge_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
 
 /*helpers*/
 void back(int *array, int a, int b, size_t size);
@@ -47,5 +50,6 @@ void back(int *array, int a, int b, size_t size);
 int partition(int *array, size_t low, size_t hi, size_t size);
 void heap(int *array, size_t size, size_t original_s);
 int *merge(int *arrayA, int *arrayB, int size_A, int size_B);
+void q_sort(int *array, int lo, int hi, size_t size);
 
 #endif /*SORT_H*/
