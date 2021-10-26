@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIDE1(i) ((2 * i) + 1)
-#define SIDE2(i) ((2 * i) + 2)
+#define LEFT(i) ((2 * i) + 1)
+#define RIGHT(i) ((2 * i) + 2)
 #define PARENT(i) ((i - 1) / 2)
 
 /**
