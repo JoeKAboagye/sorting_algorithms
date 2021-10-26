@@ -34,22 +34,22 @@ void heap(int *array, size_t size, size_t original_s)
 
 	for (i = (size - 1); (signed int) i >= 0 ; i--)
 	{
-		while (SIDE1(i) < size)
+		while (LEFT(i) < size)
 		{
-			if (SIDE2(i) < size)
+			if (RIGHT(i) < size)
 			{
-				if (array[SIDE2(i)] > array[i] || array[SIDE1(i)] > array[i])
+				if (array[RIGHT(i)] > array[i] || array[LEFT(i)] > array[i])
 				{
-					if (array[SIDE2(i)] >= array[SIDE1(i)])
+					if (array[RIGHT(i)] >= array[LEFT(i)])
 					{
-						swaper(i, SIDE2(i), array);
-						i = SIDE2(i);
+						swaper(i, RIGHT(i), array);
+						i = RIGHT(i);
 						print_array(array, original_s);
 					}
 					else
 					{
-						swaper(i, SIDE1(i), array);
-						i = SIDE1(i);
+						swaper(i, LEFT(i), array);
+						i = LEFT(i);
 						print_array(array, original_s);
 					}
 				}
@@ -58,9 +58,9 @@ void heap(int *array, size_t size, size_t original_s)
 			}
 			else
 			{
-				if (array[SIDE1(i)] > array[i])
+				if (array[LEFT(i)] > array[i])
 				{
-					swaper(i, SIDE1(i), array);
+					swaper(i, LEFT(i), array);
 					print_array(array, original_s);
 				}
 				break;
